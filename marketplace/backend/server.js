@@ -1,26 +1,24 @@
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-
-dotenv.config();
+import express from 'express'; // Reemplaza require con import
+import db from './models/index.js'; // Asegúrate de usar la extensión .js si es un archivo ES Module
+import userRoutes from '../routes/users.js'; // Agrega la extensión .js
+import productRoutes from '../routes/products.js'; // Agrega la extensión .js
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors());
+// Middleware para manejar JSON
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-// Database connection
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("Connected to MongoDB"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+// Rutas
+app.use('/api/users', userRoutes);
+app.use('/api/products', productRoutes);
 
-// Routes
-app.get("/", (req, res) => {
-  res.send("Marketplace API is running...");
-});
-
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+// Verifica la conexión a la base de datos y arranca el servidor
+db.sequelize.authenticate()
+  .then(() => {
+    console.log('Conexión exitosa a la base de datos.');
+    app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
+  })
+  .catch((err) => {
+    console.error('Error al conectar con la base de datos:', err);
+  });
