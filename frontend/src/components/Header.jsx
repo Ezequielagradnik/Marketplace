@@ -8,11 +8,12 @@ const Header = () => {
         <h1 className="text-xl font-bold">Marketplace</h1>
         <div className="space-x-4">
           <Link to="/">Home</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/cart">Cart</Link>
-          <Link to="/sell">Sell</Link>
+          <Link to="/products">Productos</Link>
+          <Link to="/cart">Carrito</Link>
+          <Link to="/sell">Vender</Link>
+          <Link to="/help">Ayuda</Link>
           <Link to="/login"> Log In</Link>
-          <Link to="/register"> Register</Link>
+          <Link to="/register"> Registrarse</Link>
         </div>
       </nav>
     </header>
