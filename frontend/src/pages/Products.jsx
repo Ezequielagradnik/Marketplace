@@ -8,7 +8,6 @@ const Products = () => {
   const [categories] = useState(["Vehículos", "Comida", "Inmuebles", "Tecnología", "Ropa", "Hogar"]);
 
   useEffect(() => {
-    // Simulación de productos para mostrar algo visual
     const simulatedProducts = [
       { id: 1, name: "Producto 1", price: 100, imageUrl: "https://via.placeholder.com/150" },
       { id: 2, name: "Producto 2", price: 200, imageUrl: "https://via.placeholder.com/150" },
