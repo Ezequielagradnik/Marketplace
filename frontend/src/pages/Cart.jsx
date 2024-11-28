@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom/dist";
 import "../styles/cart.css";
 
 const Cart = () => {
@@ -13,7 +14,9 @@ const Cart = () => {
             className="cart-empty-image"
           />
           <p className="cart-empty-text">¡Tu carrito está vacío! Explora nuestros productos y añade tus favoritos.</p>
-          <button className="btn-primary">Ir a Productos</button>
+          <Link className="btn-primary" to="/products">Ir a Productos</Link>
+         
+           
         </div>
       </div>
     </div>

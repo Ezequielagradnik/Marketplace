@@ -1,7 +1,7 @@
 import express from 'express'; // Reemplaza require con import
 import db from './models/index.js'; // Asegúrate de usar la extensión .js si es un archivo ES Module
-import userRoutes from '../routes/users.js'; // Agrega la extensión .js
-import productRoutes from '../routes/products.js'; // Agrega la extensión .js
+import userRoutes from './routes/users.js'; // Agrega la extensión .js
+import productRoutes from './routes/products.js'; // Agrega la extensión .js
 
 const app = express();
 const PORT = process.env.PORT || 5000;
