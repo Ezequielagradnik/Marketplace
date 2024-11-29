@@ -39,10 +39,25 @@
   }
   
   /* Botones principales */
-  .btn-primary,
+  .btn-primary{
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        padding: 0.85rem 1.5rem; /* Increased padding for better button width */
+        border-radius: 50px; /* Makes the button fully rounded */
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        margin: 0 1rem;
+        transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        min-width: 200px; /* Ensures consistent size */
+      }
+
   .btn-secondary {
-    padding: 0.85rem 2.5rem;
-    border-radius: 50px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 0.85rem 1.5rem; /* Increased padding for better button width */
+    border-radius: 50px; /* Makes the button fully rounded */
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
@@ -51,17 +66,10 @@
     margin: 0 1rem;
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 200px;
+    min-width: 200px; /* Ensures consistent size */
   }
   
-  .btn-primary {
-    background: linear-gradient(90deg, #007bff, #0056b3);
-  }
-  
-  .btn-secondary {
-    background: linear-gradient(90deg, #007bff, #0056b3);
-  }
-  
+
   .btn-primary:hover {
     background: linear-gradient(90deg, #0056b3, #003f7f);
     transform: translateY(-3px);

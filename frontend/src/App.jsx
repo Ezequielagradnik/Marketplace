@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Sell from "./pages/Sell";
 import Help from './pages/Help';
+import Perfil from "./pages/Perfil";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/sell" element={<Sell />} />
+          <Route path="/Perfil" element={<Perfil/>} />
         </Routes>
       </main>
       <Footer />

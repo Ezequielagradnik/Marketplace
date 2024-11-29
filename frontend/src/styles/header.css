@@ -1,0 +1,45 @@
+/* header.css */
+
+.header-container {
+    background-color: #000000; /* Dark gray */
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+  }
+  
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem; /* Space between logo and text */
+  }
+  
+  .logo {
+    width: 70px; /* Smaller logo width */
+    height: 70px; /* Smaller logo height */
+  }
+  
+  .site-title {
+    font-size: 1.25rem; /* Matches the height of the logo */
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1rem; /* Space between links */
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
